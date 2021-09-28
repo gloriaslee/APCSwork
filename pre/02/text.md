@@ -51,3 +51,4 @@ public class CtoF{
 }
 
 ```
+The concept of having to create a new scanner was kind of confusing.
