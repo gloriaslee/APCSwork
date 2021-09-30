@@ -1,0 +1,1 @@
+The concept of having to create a new scanner was kind of confusing. Why can you just define variables like int and str but you have to create a new Scanner?
