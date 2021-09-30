@@ -1,0 +1,1 @@
+I found number 5 to be really confusing, and I couldn't figure out how to do the factorial.
