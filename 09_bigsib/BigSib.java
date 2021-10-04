@@ -1,4 +1,4 @@
-public class BigSib {
+class BigSib {
   public static void main(String[] args){
     Greet BigSib = new Greet();
     BigSib.greet("Gloria");
