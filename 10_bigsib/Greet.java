@@ -1,5 +1,6 @@
 public class Greet{
-  public static void Greet(String a){
-    System.out.println("Why, hello there, "+a+". How do you do?");
+  public static String Greet(String a){
+    String finalString = "Why, hello there, "+a+". How do you do?";
+    return finalString;
   }
 }
