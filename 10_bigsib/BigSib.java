@@ -6,8 +6,8 @@ HW09 - What are BigSibs Good For/ Java Classes/How to create multiple classes
 class BigSib {
   public static void main(String[] args){
     Greet BigSib = new Greet();
-    BigSib.Greet("Gloria");
-    BigSib.Greet("Lauren");
-    BigSib.Greet("Kevin");
+    System.out.println(BigSib.Greet("Gloria"));
+    System.out.println(BigSib.Greet("Lauren"));
+    System.out.println(BigSib.Greet("Kevin"));
   }
 }
