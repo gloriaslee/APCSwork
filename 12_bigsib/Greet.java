@@ -3,7 +3,7 @@ public class Greet{
     String greeting;
     
     BigSib richard - new BigSib();
-    rechard.setHelloMsg("Word Up");
+    richard.setHelloMsg("Word Up");
     
     greeting = richard.greet("freshman");
     System.out.println(greeting);
