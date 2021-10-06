@@ -3,7 +3,7 @@ class BigSib{
     System.out.print(a);
   }
   public static String greet(String b){
-    System.out.print( b);
+    return b;
   }
 }
 
