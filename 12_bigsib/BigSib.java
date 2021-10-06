@@ -7,7 +7,7 @@ HW12: On Elder Individuality and the Elimination of Radio Fuzz/Java classes and 
 
 class BigSib{
   public static void setHelloMsg(String a){
-    System.out.print(a );
+    System.out.print(a);
   }
   public static String greet(String b){
     b=" "+b;
