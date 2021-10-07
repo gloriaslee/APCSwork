@@ -3,7 +3,7 @@ class BigSib{
   public BigSib(){
     hellomsg = "Word Up";
     System.out.println(a);
-  public static String greet(String b){
+  private static String greet(String b){
     b=" "+b;
     return b;
   }
