@@ -6,7 +6,6 @@ class BigSib{
     hellomsg = a;
   }
   public String greet(String b){
-    Big
     return hellomsg+", "+b;
   }
 }
