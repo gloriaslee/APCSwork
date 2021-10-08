@@ -1,6 +1,6 @@
 class BigSib{
   public String BigSib(){
-    hellomsg = "Hello there, ";
+    String hellomsg = "Hello there, ";
     return hellomsg;
   }
 }
