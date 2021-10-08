@@ -31,4 +31,13 @@ class BigSib{
     return hellomsg+", "+b;
   }
 }
-    
+/*
+Code for BigSib.java for defcon is here:
+class BigSib{
+  String hellomsg = "Hello there, ";
+
+  public String greet(String a){
+    return hellomsg+a;
+  }
+}
+*/
