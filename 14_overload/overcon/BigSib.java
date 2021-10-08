@@ -1,10 +1,12 @@
 class BigSib{
+  String hellomsg;
   public BigSib(){
   }
   public BigSib(String a){
-    String hellomsg = a;
+    hellomsg = a;
   }
   public String greet(String b){
+    Big
     return hellomsg+", "+b;
   }
 }
