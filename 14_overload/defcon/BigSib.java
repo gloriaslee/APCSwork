@@ -1,8 +1,6 @@
 class BigSib{
-  public String BigSib(){
-    String hellomsg = "Hello there, ";
-    return hellomsg;
-  }
+  String hellomsg = "Hello there, ";
+
   public String greet(String a){
     return hellomsg+a;
   }
