@@ -3,8 +3,13 @@ Duck Duck Goose - Gloria Lee (Flounder), Jonathan Song (Pheonix), Rin Fukuoka (T
 APCS
 HW18 - CPA-one
 2021-10-14
-QCC:
-DISCO:
+QCC: When do we use static and when do we not? What does static do exactly? When is it a good idea to make instance variables/methods private or public?
+DISCO: I initially did not include static with my instance variables and when I tried to run my code, I got this:
+error: non-static variable fullName cannot be referenced from a static context
+I'm still now sure exactly what static does and when we should use it. 
+I also found that using a constructor would be more efficient than setting up methods to set each individual variable, but there may be times 
+when using individual methods for each variable would be better. 
+
 Lastest and Greatest Q2 Response:
 Latest and Greatest Q3 Response:
 */
