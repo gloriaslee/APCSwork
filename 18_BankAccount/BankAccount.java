@@ -24,6 +24,37 @@ public class BankAccount{
   static int accountNumber;
   static double accountBalance;
 
+  public String setName( String a ) {
+    String fullName = a;
+    name = newName;
+    return oldName;
+  }
+
+  public String setPassword( String newPasswd ) {
+    String oldPasswd = passwd;
+    passwd = newPasswd;
+    return oldPasswd;
+  }
+
+  public short setPin( short newPin ) {
+    short oldPin = pin;
+    pin = newPin;
+    return oldPin;
+  }
+
+  public int setAcctNum( int newAcctNum ) {
+    int oldAcctNum = acctNum;
+    acctNum = newAcctNum;
+    return oldAcctNum;
+  }
+
+  public double setBalance( double newBalance ) {
+    double oldBalance = balance;
+    balance = newBalance;
+    return oldBalance;
+  }
+  
+  
   public BankAccount(String a, String b, int c, int d, double f){
     fullName = a;
     password = b;
