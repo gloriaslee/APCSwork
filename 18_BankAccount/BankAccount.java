@@ -29,7 +29,7 @@ public class BankAccount{
     accountBalance = f;
   }
 
-  public static void infoPrint(){
+  public void infoPrint(){
     System.out.println("Name: "+fullName);
     System.out.println("Password: "+password);
     System.out.println("PIN: "+pin);
@@ -37,23 +37,23 @@ public class BankAccount{
     System.out.println("Account Balance: "+accountBalance+" dollars");
   }
 
-  public static void deposit(double depositAmount){
+  public void deposit(double depositAmount){
     accountBalance = accountBalance + depositAmount;
 
   }
 
-  public static void withdraw(double withdrawAmount){
+  public void withdraw(double withdrawAmount){
     accountBalance = accountBalance - withdrawAmount;
 
   }
 
   public static void main(String[] args){
     BankAccount firstAccount = new BankAccount("Flounder", "you'll never guess", 1234, 1, 10000.99);
-    infoPrint();
-    withdraw(200.49);
-    infoPrint();
-    deposit(2343.53);
-    infoPrint();
+    firstAccount.infoPrint();
+    firstAccount.withdraw(200.49);
+    firstAccount.infoPrint();
+    firstAccount.deposit(2343.53);
+    firstAccount.infoPrint();
 
   }
 
