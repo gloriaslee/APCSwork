@@ -63,9 +63,6 @@ public class BankAccount{
     return oldBalance;
   }
 
-
-
-
 //deposit
   public void deposit(double depositAmount){
     accountBalance = accountBalance + depositAmount;
@@ -92,7 +89,6 @@ public class BankAccount{
     }
   }
   
-
 //overwritten String
   public String toString() {
     String retStr = "\nAccount info:\n=======================";
@@ -144,7 +140,5 @@ public class BankAccount{
     
     System.out.println(richard.toString());
     System.out.println(richard.authenticate(99999989, "richardo"));
-
   }
-
 }
