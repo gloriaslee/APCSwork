@@ -1,4 +1,6 @@
 /*Duck Duck Goose - Trio 7 - Gloria Lee, Jonathan Song, Rin Fukuoka
+HW20 -- External Audit(testing and breaking BankAccount)
+2021-10-19
 
 DISCO - We discovered that in order to declare a variable to be of the short data type, we have to manually write 
 (short) in front of the specific short value we are trying to save. We discovered that there were several ways to 
