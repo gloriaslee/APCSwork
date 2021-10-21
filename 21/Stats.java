@@ -41,7 +41,7 @@ public class Stats {
   public static int geoMean(int a, int b) {
     int geoMean1;
     if(a*b>=0){
-    	geoMean1 = Math.sqrt(a + b);
+    	geoMean1 = Math.round(Math.sqrt(a + b));
       return geoMean1;
     }
     else{
@@ -61,7 +61,7 @@ public class Stats {
 
   public static int geoMean(int a, int b, int c) {
     int geoMean3;
-    geoMean3= Math.cbrt(a*b*c);
+    geoMean3= Math.round(Math.cbrt(a*b*c));
     return geoMean3;
   }
   public static double geoMean(double a, double b, double c) {
