@@ -1,5 +1,4 @@
-DISCO: 
-QCC: 
+
 
 public class Stats {
 
