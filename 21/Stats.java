@@ -1,7 +1,7 @@
 
 
 public class Stats {
-
+  import java.lang.Math
   public static int mean(int a, int b) {
     int mean;
     mean = (a + b)/2;
@@ -41,7 +41,7 @@ public class Stats {
   public static int geoMean(int a, int b) {
     int geoMean;
     if(a*b>=0){
-    	geoMean = sqrt(a + b);
+    	geoMean = Math.sqrt(a + b);
       return geoMean;
     }
     else{
@@ -51,7 +51,7 @@ public class Stats {
   public static double geoMean(double a, double b) {
     double geoMean;
     if (a*b>=0){
-      geoMean = sqrt(a + b);
+      geoMean = Math.sqrt(a + b);
       return geoMean;
     }
     else{
@@ -61,12 +61,12 @@ public class Stats {
 
   public static int geoMean(int a, int b, int c) {
     int geoMean;
-    geoMean = cbrt(a*b*c);
+    geoMean = Math.cbrt(a*b*c);
     return geoMean;
   }
   public static double geoMean(double a, double b, double c) {
     double geoMean;
-    geoMean = cbrt(a * b * c);
+    geoMean = Math.cbrt(a * b * c);
     return geoMean;
   }
 
