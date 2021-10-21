@@ -1,7 +1,7 @@
 
 
 public class Stats {
-  import java.lang.Math
+  import java.lang.Math;
   public static int mean(int a, int b) {
     int mean;
     mean = (a + b)/2;
