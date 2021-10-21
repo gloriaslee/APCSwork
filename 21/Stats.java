@@ -39,20 +39,20 @@ public class Stats {
   
 
   public static int geoMean(int a, int b) {
-    int geoMean;
+    int geoMean1;
     if(a*b>=0){
-    	geoMean = Math.sqrt(a + b);
-      return geoMean;
+    	geoMean1 = Math.sqrt(a + b);
+      return geoMean1;
     }
     else{
       System.out.print("undefined");
     }
   }
   public static double geoMean(double a, double b) {
-    double geoMean;
+    double geoMean2;
     if (a*b>=0){
-      geoMean = Math.sqrt(a + b);
-      return geoMean;
+      geoMean2 = Math.sqrt(a + b);
+      return geoMean2;
     }
     else{
       System.out.println("undefined");
@@ -60,14 +60,14 @@ public class Stats {
   }
 
   public static int geoMean(int a, int b, int c) {
-    int geoMean;
-    geoMean = Math.cbrt(a*b*c);
-    return geoMean;
+    int geoMean3;
+    geoMean3= Math.cbrt(a*b*c);
+    return geoMean3
   }
   public static double geoMean(double a, double b, double c) {
-    double geoMean;
-    geoMean = Math.cbrt(a * b * c);
-    return geoMean;
+    double geoMean4;
+    geoMean4 = Math.cbrt(a * b * c);
+    return geoMean4;
   }
 
 
