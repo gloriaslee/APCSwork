@@ -46,6 +46,7 @@ public class Stats {
     }
     else{
       System.out.print("undefined");
+      return 0;
     }
   }
   public static double geoMean(double a, double b) {
@@ -56,6 +57,7 @@ public class Stats {
     }
     else{
       System.out.println("undefined");
+      return 0;
     }
   }
 
