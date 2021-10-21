@@ -56,7 +56,7 @@ public class Stats {
       return geoMean;
     }
     else{
-      System.out.println("undefined")
+      System.out.println("undefined");
     }
   }
 
