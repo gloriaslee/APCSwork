@@ -1,4 +1,4 @@
-public class StatsDriver(){
+public class StatsDriver{
   public static void main(String[]args){
     Stats.mean(2,4);//expected output 3
     Stats.mean(3.3);//expected output 3
