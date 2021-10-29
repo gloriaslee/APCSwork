@@ -11,6 +11,7 @@ Time Spent: 1hr
 
 public class Rof{
 
+// FOR Loop Fence Method
   public static String fenceF(int posts) {
     String fence = "|";
     for (int i = 1; i < posts; i++) {
@@ -19,13 +20,16 @@ public class Rof{
     return fence;
   }
   
+// FOR Loop Reverse String
   public static String reverseF(String s) {
     String rs = "";
     for (int i = s.length()-1; i >= 0 ; i--) {
-	rs += s.substring(i, i+1);
-    }
+				rs += s.substring(i, i+1);
+		}
     return rs;
   }
+  
+// RECURSION Loop Reverse String
   static String rs = "";
   public static String reverseR(String s){
   
@@ -38,7 +42,7 @@ public class Rof{
     }
   }
                       
-
+//main method to test cases
   public static void main(String[] args){
     System.out.println(fenceF(1));
     System.out.println(fenceF(2));
