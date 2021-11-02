@@ -20,8 +20,8 @@
 public class Commafier {
 
   public static void main(String [] args) {
-    
-		for (String s: args) {
+	  
+    for (String s: args) {
       System.out.println( "Recursive: " + commafyR(Integer.parseInt(s)));
       System.out.println( "Iterative: " + commafyF(Integer.parseInt(s)));
     }
