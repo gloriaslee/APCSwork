@@ -1,4 +1,5 @@
 /***
+
  * Clyde "Thluffy" Sinclair
  * APCS
  * HW31 -- deploying linear search on Strings, using helper methods
