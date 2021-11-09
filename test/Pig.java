@@ -45,17 +45,6 @@ public class Pig {
   public static boolean hasA( String w, String letter ) {
 
     return w.indexOf(letter) != -1;
-
-    // equiv code, wo using indexOf()...
-       boolean ans = false;
-       for( int i = 0; i < w.length(); i++ ) {
-       	if ( w.substring(i,i+1).equals(letter) ) {
-       		ans = true;
-       //Q: is there a more efficient way?
-       	}
-       }
-       return ans;
-    
   }//end hasA()
 
 
@@ -77,15 +66,7 @@ public class Pig {
 
     return allVowels(w).length();
 
-    // long version using for
-       int numVowels = 0; //init vowels counter var
-       //must touch each letter in word, so use FOR
-       for( int i = 0; i < w.length(); i++ ) {
-       	if ( isAVowel( w.substring(i,i+1) ) )
-       		numVowels++;
-       }
-       return numVowels;
-    
+   
   }
 
 
