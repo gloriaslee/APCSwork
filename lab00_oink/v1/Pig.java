@@ -7,6 +7,8 @@
  *
  * class Pig
  * a Pig Latin translator
+ 
+ QCC/DISCO:
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
