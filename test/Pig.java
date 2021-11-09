@@ -150,7 +150,14 @@ public class Pig {
       int vPos = w.indexOf( firstVowel(w) );
       ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
     }
-
+    
+    for(int i=0;i<ans.length();i++){
+      if(isACapital(ans.subString(i,i+1))){
+        String upper = ans.subString(0,1);
+        String lower = ans.subString(1,ans.length());
+        ans=upper.toUpperCase()+lower.toLowerCase();
+      }
+    }
     return ans;
   }
 
@@ -163,8 +170,7 @@ public class Pig {
   
   public static void main( String[] args ) {
     
-		System.out.println(isACapital("Testy"));
-    System.out.println(isACapital("test"));
+
     
     for( String word : args ) {
       System.out.println( "allVowels \t" + allVowels(word) );
