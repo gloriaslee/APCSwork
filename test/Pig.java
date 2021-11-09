@@ -182,8 +182,8 @@ public class Pig {
   
   public static void main( String[] args ) {
     
-		System.out.println(isACapital(Test))
-    System.out.println(isACapital(test))
+		System.out.println(isACapital("A"));
+    System.out.println(isACapital("a"));
     
     for( String word : args ) {
       System.out.println( "allVowels \t" + allVowels(word) );
