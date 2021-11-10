@@ -1,16 +1,13 @@
-/***
- * Clyde "Thluffy" Sinclair
- * APCS
- * HW31 -- deploying linear search on Strings, using helper methods
- * 2021-11-04r
- * time spent: .5hrs
- *
- * class Pig
- * a Pig Latin translator
 
- * DISCO - I discovered that the syntax is substring not subString even after all these weeks of working with substrings.
+/*
+Gloria Lee (Team Asphyxiation with Neil Lin and Ethan Lam)
+APCS
+L00: Etterbay Odingcay Oughthray Ollaborationcay
+2021-11-08
+time spent: 4 hrs
 
- * QCC:
+NEW IN v4: Successful creation of a method to address test cases with no vowels at all! Instead of returning error, we modified previous methods (countvowels) so that 
+an empty string would not be returned if there were no vowels.
 
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
