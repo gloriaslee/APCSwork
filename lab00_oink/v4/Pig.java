@@ -7,8 +7,11 @@
  *
  * class Pig
  * a Pig Latin translator
+
  * DISCO - I discovered that the syntax is substring not subString even after all these weeks of working with substrings.
+
  * QCC:
+
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
@@ -27,7 +30,7 @@
 
 public class Pig {
 
-    private static final String VOWELS = "aeiouAEIOU";
+    private static final String VOWELS = "aeiouyAEIOUY";
     private static final String CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String PUNCS = ".,:;!?";
 
@@ -50,10 +53,7 @@ public class Pig {
     precondition: letter.length() == 1
     **/
   public static boolean isAVowel( String letter ) {
-
-
     return VOWELS.indexOf( letter ) != -1;
-
   }
 
 
@@ -63,10 +63,15 @@ public class Pig {
     post: countVowels("meatball") -> 3
     **/
   public static int countVowels( String w ) {
-
-    return allVowels(w).length();
-
-
+    int counter = 0;
+    String letter;
+    for(int i=0;i<w.length();i++){
+      letter=w.substring(i,i+1);
+      if(isAVowel(letter)==true){
+        counter+=1;
+      }
+    }
+    return counter;
   }
 
 
@@ -77,8 +82,7 @@ public class Pig {
     hasAVowel("zzz") -> false
     **/
   public static boolean hasAVowel( String w ) {
-
-    return countVowels(w) >= 0;
+    return countVowels(w) > 0;
   }
 
 
@@ -92,7 +96,7 @@ public class Pig {
     **/
   public static String allVowels( String w ) {
 
-    String ans = ""; //init return String
+    String ans = " "; //init return String
 
     for( int i = 0; i < w.length(); i++ ) {
 
@@ -114,9 +118,9 @@ public class Pig {
 
     String ans = "";
 
-    if ( hasAVowel(w) ) //Q: Why this necess?
-      ans = allVowels(w).substring(0,1);
-
+    if ( hasAVowel(w) ){ //Q: Why this necess?
+      ans = allVowels(w).substring(1,2);
+    }
     return ans;
   }
 
@@ -140,23 +144,10 @@ public class Pig {
     engToPig("java")   --> "avajay"
     **/
   public static String engToPig( String w ) {
-
     String ans = "";
-    int counter = 0;
-    for(int i=0;i<w.length();i++){
-      if(isAVowel(w.substring(i,i+1))==true){
-        counter +=1;
-      }
-    }
-    if(counter==0){
-
+    if(countVowels(w)==0){
       ans = w + "ay";
-
     }
-    /*
-    if(w.indexOf("y")!=0 && w.indexOf(firstVowel(w))<w.indexOf("y") || w.indexOf("Y")!=0 && w.indexOf(firstVowel(w))<w.indexOf("Y"){
-      int vPos = w.indexOf(
-      */
     else if ( beginsWithVowel(w) ){
       ans = w + "way";
     }
@@ -164,6 +155,7 @@ public class Pig {
       int vPos = w.indexOf( firstVowel(w) );
       ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
     }
+
     return ans;
   }
 
@@ -190,7 +182,7 @@ public class Pig {
 
 
     for( String word : args ) {
-      System.out.println( "allVowels \t" + allVowels(word) );
+      System.out.println( "allVowels \t" + allVowels(word).substring(1) );
       System.out.println( "firstVowels \t" + firstVowel(word) );
       System.out.println( "countVowels \t" + countVowels(word) );
       System.out.println( "engToPig \t" + engToPig(word) );
