@@ -26,7 +26,6 @@ public class DemoScanner {
 
     while( sc.hasNext() ) {
       System.out.println( sc.next() );
-      System.out.println( sc.next() );
     }
 
   }//end main()
