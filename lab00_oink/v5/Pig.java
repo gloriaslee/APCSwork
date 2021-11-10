@@ -1,17 +1,11 @@
-/***
- * Clyde "Thluffy" Sinclair
- * APCS
- * HW31 -- deploying linear search on Strings, using helper methods
- * 2021-11-04r
- * time spent: .5hrs
- *
- * class Pig
- * a Pig Latin translator
+/*
+Gloria Lee (Team Asphyxiation with Neil Lin and Ethan Lam)
+APCS
+L00: Etterbay Odingcay Oughthray Ollaborationcay
+2021-11-08
+time spent: 4 hrs
 
- * DISCO - I discovered that the syntax is substring not subString even after all these weeks of working with substrings.
-
- * QCC:
-
+NEW IN v5: I tried to improve the capitalization method to account for different test cases, but I decided to shelve this for now. This is incomplete, and v6 goes on from v4.
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
