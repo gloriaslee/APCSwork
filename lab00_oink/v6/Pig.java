@@ -5,8 +5,12 @@ L00: Etterbay Odingcay Oughthray Ollaborationcay
 2021-11-08
 time spent: 4 hrs
 
-DISCO:
-QCC:
+DISCO: We discovered that many of our methods that we used to code for various special cases were definitely more complicated than they needed to be because of all
+	the different layering of methods on top of each other that we used for each method. This made the code quite hard to read even if we were the ones who wrote it. 
+	We tried to fix this through commenting out intentions behind different lines of code. Additionally, we tried hard to get the scanner in main to work, but it was
+	getting late, and it seemed like we weren't making much progress, so we were forced to leave the scanner code in v7 incomplete and uncompilable. :(
+QCC: What are some more efficient ways to address y nonvowel/vowel cases? How should capitalization be addressed in general? What if there are multiple capital letters 
+	in a string? How were we supposed to get this done without spending more than thirty minutes outside of school together? 
 HOW WE UTILIZED SCANNER DEMO (v7): After puzzling through the scanner for half an hour, we were unable to figure out how to get the scanner in main 
 	to achieve compilability. We used the scanner demo to try to understand the syntax of scanner, and we learned the syntax to create a new scanner. We 
 	think that System.in would be the input inputted into the System, which is why we tried to replace System.in with words.in, but I don't think that worked.
@@ -31,7 +35,7 @@ NEW IN v6: Successful implementation of ways to account for both y vowel/nonvowe
  *      then develop and test one method at a time.
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
-*/
+
 
 public class Pig {
 
