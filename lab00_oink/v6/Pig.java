@@ -1,14 +1,22 @@
-/***
- * Clyde "Thluffy" Sinclair
- * APCS
- * HW31 -- deploying linear search on Strings, using helper methods
- * 2021-11-04r
- * time spent: .5hrs
- *
- * class Pig
- * a Pig Latin translator
- * DISCO - I discovered that the syntax is substring not subString even after all these weeks of working with substrings.
- * QCC:
+/*
+Gloria Lee (Team Asphyxiation with Neil Lin and Ethan Lam)
+APCS
+L00: Etterbay Odingcay Oughthray Ollaborationcay
+2021-11-08
+time spent: 4 hrs
+
+DISCO:
+QCC:
+HOW WE UTILIZED SCANNER DEMO (v7): After puzzling through the scanner for half an hour, we were unable to figure out how to get the scanner in main 
+	to achieve compilability. We used the scanner demo to try to understand the syntax of scanner, and we learned the syntax to create a new scanner. We 
+	think that System.in would be the input inputted into the System, which is why we tried to replace System.in with words.in, but I don't think that worked.
+	
+WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO: We were also unsure about this because we were unsure about what the syntax of Scanner's code meant exactly in the first place, 
+	and we weren't sure about the run time error either because there was no error message seen except for there being no way to break out of the Scanner code, except for control C,
+	which meant this this could have been the runtime error. Anyway, we hypothesized that this error could have been caused by the two print statements, which although it seems
+	unnecessary, it doesn't seem to be the culprit of the error, but this was the best answer we could come up with.
+NEW IN v6: Successful implementation of ways to account for both y vowel/nonvowel cases and punctuation cases.
+/***	
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
@@ -23,7 +31,7 @@
  *      then develop and test one method at a time.
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
-
+*/
 
 public class Pig {
 
