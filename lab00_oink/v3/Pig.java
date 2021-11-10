@@ -1,17 +1,11 @@
-/***
+/*
+Gloria Lee (Team Asphyxiation with Neil Lin and Ethan Lam)
+APCS
+L00: Etterbay Odingcay Oughthray Ollaborationcay
+2021-11-08
+time spent: 4 hrs
 
- * Clyde "Thluffy" Sinclair
- * APCS
- * HW31 -- deploying linear search on Strings, using helper methods
- * 2021-11-04r
- * time spent: .5hrs
- *
- * class Pig
- * a Pig Latin translator
-
- * DISCO - I discovered that the syntax is substring not subString even after all these weeks of working with substrings.
-
- * QCC:
+NEW IN v3: Successful implementation of the capitalization method into the main method in order to account for words capitalized. 
 
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
