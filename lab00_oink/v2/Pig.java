@@ -5,7 +5,7 @@ L00: Etterbay Odingcay Oughthray Ollaborationcay
 2021-11-08
 time spent: 4 hrs
 
-NEW IN v6: Created the method isACapital to test for a capital letter, and created hard coded test cases.
+NEW IN v2: Created the method isACapital to test for a capital letter, and created hard coded test cases.
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
