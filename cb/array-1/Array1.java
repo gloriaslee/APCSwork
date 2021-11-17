@@ -3,7 +3,7 @@ Nora Miller, Gloria Lee, Ziying Jian (3 Lucky Duckies)
  APCS
  HW37 - PPMP[] Practicing Arrays
  2021-11-16
- time spent: 1 hrs
+ time spent: 2 hrs
  
  QCC: the difference between [] and {}? How can we effectively layer if statements and else statements without making the code inefficient / complicated? How long should
  each of these problems be taking us? What is the most effective way to do each problem?
