@@ -18,7 +18,7 @@
  */
 
 
-public class Slots2 {
+public class Slots {
 
   //instance variable to represent master copy for slot machine
   private static final String[] FRUITS = {
@@ -32,7 +32,7 @@ public class Slots2 {
   private String[] _fruits; //to be init'd by each instance
 
 
-	public Slots2() // constructor - uses FRUITS and initializes _fruits for the instance.
+	public Slots() // constructor - uses FRUITS and initializes _fruits for the instance.
 	{
 	  _fruits = new String[FRUITS.length];
 	  for (int i = 0; i < FRUITS.length; i++){
@@ -125,8 +125,8 @@ public class Slots2 {
   public static void main( String[] args ) {
     //usage: move bar below down 1 line at a time to test functionality...
 
-    Slots2 machine01 = new Slots2();
-    Slots2 machine02 = new Slots2();
+    Slots machine01 = new Slots();
+    Slots machine02 = new Slots();
 
     /*
     printArray(machine01._fruits);
