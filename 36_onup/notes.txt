@@ -1,0 +1,17 @@
+Compile time errors vs Run time errors vs Logic errors. Logic errors are when you can compile and run code, but the code has unintended output.
+Avoid excessive debugging by using incremental development. Achieve compilability first. 
+Address first error message first. Number of errors detected may all stem from this first error. 
+Read error message closely. Valuable information found in what is printed from different error messages! 
+While debugging: syntax errors?
+Debugging by bisection if error cannot be found/fixed.  Fast and reliable! Delete code, running remaining code line by line until the line where error is born is taken out.
+Remedies suggested by the error messages are often misleading.
+Hanging programs - infinite loop/recursion. Indicated often by stack overflow error  Diagnose this by adding print statements (entering/exiting loop).
+Alternatively, add print statements at the end of each loop to diagnose which loop is causing the error.
+Infinite recursion: no base case?
+Trace flow of execution to visualize code.
+Different types of exceptions. Based on exception type, you can understand your code’s error better and how to fix it.
+Too much output? Instead, you can comment out print statements.
+Logic errors. First make a hypothesis. Commonly check for integer arithmetic errors, float accuracy errors, and == vs equals.
+Try to rewrite expressions that are overly complicated and hard to read/follow.
+Use temporary values to display intermediate vars before returning to figure out why code doesn’t return expected output.
+Most importantly: don’t get tilted. Take a break. Breathe.If needed, ask another person to help you read over code/debug.
