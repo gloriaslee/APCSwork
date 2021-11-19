@@ -10,9 +10,12 @@
  * The only modification you should make to this driver file is moving comment bar down in main method, and filling in DISCO/QCC
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  * 
- * DISCO:
+ * DISCO: First, we should create classes of Protagonist and Monster and class constructors for Protagonist. The protagonist constructor would take input name (String). 
+ Scanners are also initiated in the code, which means that we will need a separate file that contains text to scan. 
+ The code also calls on pat.specialize() and pat.normalize() which will be methods that we will have to code for. I also notice an attack method that we will have to code. 
  *
- * QCC:
+ * QCC: What is the purpose of  catch ( IOException e ) { }? What is the purpose/difference of having an input stream reader as well as a buffered reader?
+ What are things to be careful of when using break in code?
  * 
  **********************************************/
 
