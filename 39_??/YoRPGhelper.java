@@ -1,0 +1,6 @@
+class Protagonist{
+
+}
+class Monster{
+
+}
