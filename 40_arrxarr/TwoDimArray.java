@@ -8,6 +8,8 @@
 // HW40 -- 2D arrays
 // 2021-11-30
 
+Time Spent: 1hr
+
 DISCO:
 
 * To go through each element of the 2d array, you can use for loops
