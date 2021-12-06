@@ -1,25 +1,21 @@
 /******************************
- * class TwoDimArray
- * (skeleton)
- * practice working with 2D arrays
+
 
  // 3 Lucky Duckies: Gloria Lee, Ziying Jian, Nora Miller
  // APCS pd8
- // HW40 -- 2D arrays
- // 2021-11-30
+ // HW42 -- Be More Rational
+ // 2021-12-07
 
  Time Spent: 1hr
 
  DISCO:
 
- * The compiler appears to be running toString when System.out.println(t) is invoked - see commented line
+ * Because we are changing rational values directly, we have to be careful when deciding what the expected outcome of following arithmetic will be. 
 
- * this can be used to reference other methods or instance variables of the instance invoking a given method.
- For the methods: use <method>(this)
- For the inst vars: use this.<instVar>
+ * We should use this.instVar whenever possible for clarity. It is also better to avoid using *= or anything similar for clarity.
 
 
- QCC: Why is the first DISCO item true?
+ QCC: What are other methods that we can add to enrich Rational.java?
  ******************************/
 
 
