@@ -1,5 +1,5 @@
 // 3 Lucky Duckies: Gloria Lee, Ziying Jian, Nora Miller
-// APCS1 pd0=8d
+// APCS1 pd8
 // HW45 -- Implements, Abstraction
 // 2021-12-08
 // Time Spent: 1.2hr
