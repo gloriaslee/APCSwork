@@ -1,50 +1,38 @@
-// Clyde "Thluffy" Sinclair
-// APCS1 pd0
-// HW44 -- expanding SuperArray functionality, encapsulation
+// 3 Lucky Duckies: Gloria Lee, Ziying Jian, Nora Miller
+// APCS1 pd8
+// HW45 -- Implements, Abstraction
 // 2021-12-08
-// Time Spent: 1 hr
+// Time Spent: 1.2hr
 
 /***
-<<<<<<< HEAD
+DISCO/Reminders to selves:
+* _size = the number of elements that are visible to us
+* _data.length() =  capacity
+* expand() or expanding increses the length or capacity of the array (not t)
+* (reading the textbook) One defining feature of abstract is that it cannot be
+  instantiated. One possible way of thinking about it - an interface is sort of
+  like the descriptions of our methods stated in the homework. While different
+  teams' implementations will be different, they all should have the methods
+  stated in the homework assignment.
 QCC:
-* Are there not contexts in which 0 would be considered a meaningful value? What does meaningful mean anyway?
-Not really sure what size() is for, but one working theory:
-Since the capacity of our SuperArrays (this._data.length) may be greater than the size
-* How do we account for cases where we try to add in elements which would exceed the array size?
-
-DISCO:
-* If there is a meaningful 0 in the array, it does not get counted in size().
-* If we try to add in elements to the array when there is already ten elements in the array, we get an
-index out of bounds exception error. Do we fix this by creating a new array entirely with a new size capacity?
-* How do we avoid an index out of bounds exception error in the most efficient and cleanest way possible?
-=======
-DISCO:
-* If there is a meaningful 0 in the array, it does not get counted in size().
-* If we try to add in elements to the array when there is already ten elements in the array, we get an
-index out of bounds exception error. Do we fix this by creating a new array entirely with a new size capacity?
-* How do we avoid an index out of bounds exception error in the most efficient and cleanest way possible?
-QCC:
-* Are there not contexts in which 0 would be considered a meaningful value? What does meaningful mean anyway?
-* Not really sure what size() is for, but one working theory:
-Since the capacity of our SuperArrays (this._data.length) may be greater than the size,
-it useful to find the number of 'meaningful' elements
-* How do we account for cases where we try to add in elements which would exceed the array size?
->>>>>>> fb5698555b0dd6a0778bde7ef66262a91013ceff
+* toString method already hides values after _size that are deemed "unimportant"
+* We changed the add to return void instead of boolean because the two return types were conflicting, but
+  should we have changed both to return boolean instead?
+* How do you test ListInt's methods and also ensure that we are not testing SuperArray's methods?
+* How do we confirm that ListInt is functioning as intended?
+* Possible answer: Since abstract methods have no body, the classes implementing them,
+  like SuperArray, need to override them. Where else would the body of those
+  functions be besides in SuperArray?
 **/
 
 /***************************
- * class SuperArray version 2.0
- * (SKELETON)
- * Wrapper class for array. Facilitates
- * resizing
- * expansion
- * read/write capability on elements
- * adding an element to end of array
- * inserting an element at specified index
- * removing an element at specified index
+ * class SuperArray version 3.0
+ * prevents the user from assigning values in a non-contiguous way
+ * redefines size()
+ * uses an interface
  ***************************/
 
-public class SuperArray
+public class SuperArray implements ListInt
 {
 
   private int[] _data;  //underlying ("encapsulated") container
@@ -107,19 +95,22 @@ public class SuperArray
   {
       _size += 1;
       this._data[_size - 1] = newVal;
-<<<<<<< HEAD
   }
 
 
   //inserts an item at index
-  public void add( int index, int newVal )
+  public void addAtIndex( int index, int newVal )
   {
-    this._size = this._size + 1; // expands the size of the array by 1
-    for(int i = _size - 1; i > index; i -=1) {
-      // starts indexing from the back of the array until it hits the element one after the desired index
-      this._data[i] = this._data[i - 1]; // copy the element from the index below you
-    } // during the first iteration, the value of the last element is 0
+    if(index < _size){
+      this._size = this._size + 1; // expands the size of the array by 1
+      for(int i = _size - 1; i > index; i -=1) {
+        // starts indexing from the back of the array until it hits the element one after the desired index
+        this._data[i] = this._data[i - 1]; // copy the element from the index below you
+      }
+    }
+    // else{ _size = index;} // during the first iteration, the value of the last element is 0
     this._data[index] = newVal;
+
   }
 
 
@@ -135,44 +126,16 @@ public class SuperArray
   }
 
 
-=======
-  }
-
-
-  //inserts an item at index
-  public void add( int index, int newVal )
-  {
-    this._size = this._size + 1; // expands the size of the array by 1
-    for(int i = _size - 1; i > index; i -=1) {
-      // starts indexing from the back of the array until it hits the element one after the desired index
-      this._data[i] = this._data[i - 1]; // copy the element from the index below you
-    } // during the first iteration, the value of the last element is 0
-    this._data[index] = newVal;
-  }
-
-
-  //removes the item at index
-  //shifts elements left to fill in newly-empted slot
-  public void remove( int index )
-  {
-    for(int i = index; i <= this._size-2; i++) {
-      // start at index; the last element you modify is the second to last element
-      this._data[i] = this._data[i + 1]; // copy the element from the index below you
-      }
-    this._size = this._size - 1;
-  }
-
-
->>>>>>> fb5698555b0dd6a0778bde7ef66262a91013ceff
   //return number of meaningful items in _data
   public int size()
   {
-    int items = 0;
-    for(int i = 0; i < this._size; i++){
-      if (this._data[i] != 0){
-        items += 1;
-      }
-    } return items;
+    return this._size;
+    // int items = 0;
+    // for(int i = 0; i < this._size; i++){
+    //   if (this._data[i] != 0){
+    //     items += 1;
+    //   }
+    // } return items;
   } // needs to be refactored if other data types are introduced
 
 
@@ -214,17 +177,26 @@ public class SuperArray
 
       System.out.println("Printing populated SuperArray mayfield...");
       System.out.println(mayfield + "...expected [ 5 4 3 2 1 ]");
+      System.out.println(mayfield._size);
+
 
       /* ~~~====== TESTING ADD-INSERT ======~~~ */
-      mayfield.add(3,99);
+      mayfield.addAtIndex(3,99);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield + "....expected [ 5 4 3 2 99 1 ]");
-      mayfield.add(2,88);
+      mayfield.addAtIndex(2,88);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield + "...expected [ 5 4 3 88 2 99 1 ]");
-      mayfield.add(1,77);
+      mayfield.addAtIndex(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield + "...expected [ 5 4 77 3 88 2 99 1 ]");
+      System.out.println(mayfield.size());
+
+      // makes sure that you can't add elements
+      mayfield.expand();
+      mayfield.addAtIndex(12, 44); //
+      System.out.println("Should stay the same:" + mayfield );
+      System.out.println(mayfield.size());
 
       /* ~~~====== TESTING REMOVE ======~~~ */
       mayfield.remove(3);
@@ -235,14 +207,10 @@ public class SuperArray
       System.out.println(mayfield + "...expected [ 5 4 77 2 99 1 ]");
 
       /* ~~~====== TESTING SIZE ======~~~ */
-      System.out.println("Printing SuperArray mayfield size()");
-      mayfield.add(0);
-      mayfield.add(121);
-      mayfield.add(0);
-      mayfield.add(0);
-      System.out.println(mayfield + "...expected [ 5 4 77 2 99 1 0 121 0 0 ]");
-      System.out.println(mayfield._size + "...expected 10");
-      System.out.println(mayfield.size() + "...expected 7");
+      System.out.println(mayfield._size + "...expected 6");
+      System.out.println(mayfield.size() + "...expected 6");
+      // this part is supposed to malfunction - users aren't supposed to add 0 values
+      // to an array
       /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
