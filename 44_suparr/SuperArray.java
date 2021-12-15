@@ -107,7 +107,6 @@ public class SuperArray
   {
       _size += 1;
       this._data[_size - 1] = newVal;
-<<<<<<< HEAD
   }
 
 
@@ -135,35 +134,6 @@ public class SuperArray
   }
 
 
-=======
-  }
-
-
-  //inserts an item at index
-  public void add( int index, int newVal )
-  {
-    this._size = this._size + 1; // expands the size of the array by 1
-    for(int i = _size - 1; i > index; i -=1) {
-      // starts indexing from the back of the array until it hits the element one after the desired index
-      this._data[i] = this._data[i - 1]; // copy the element from the index below you
-    } // during the first iteration, the value of the last element is 0
-    this._data[index] = newVal;
-  }
-
-
-  //removes the item at index
-  //shifts elements left to fill in newly-empted slot
-  public void remove( int index )
-  {
-    for(int i = index; i <= this._size-2; i++) {
-      // start at index; the last element you modify is the second to last element
-      this._data[i] = this._data[i + 1]; // copy the element from the index below you
-      }
-    this._size = this._size - 1;
-  }
-
-
->>>>>>> fb5698555b0dd6a0778bde7ef66262a91013ceff
   //return number of meaningful items in _data
   public int size()
   {
