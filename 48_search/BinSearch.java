@@ -53,7 +53,7 @@ public class BinSearch
       m = (lo + hi) / 2; // why does this need to be up here?
       if (target == a[m]) {
         tPos = m;
-break;
+        break;
   } else if ( target.compareTo(a[m]) >= -1 ) { // ***===> ERROR: Cannot compare Comparable objects (could be run with a tag)
   // look below m now
         hi = m;
