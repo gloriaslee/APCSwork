@@ -1,6 +1,21 @@
 /**
+3 Lucky Duckies - Gloria Lee, Ziying Jian, Nora Miller
+APCS
+HW 48_search
    class BinSearch
    Binary search on array of Comparables
+2021 - 12 - 15
+Time Spent: 1.5 h
+
+QCC:
+What is the syntax for comparing comparables to each other?
+Is it possible to typecast comparables into int? And if so, what's the syntax for doing so?
+Is it more efficient to binary search recursively or iteratively?
+
+DISCO:
+We cannot compare Comparables to each other using the simple == or < or > operators.
+We cannot typecast Comparables using (int).
+When compiling, a warning comes up, but this warning can be ignored. Why?
 **/
 
 public class BinSearch
