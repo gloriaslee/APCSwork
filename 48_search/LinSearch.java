@@ -56,10 +56,10 @@ public class LinSearch
     Comparable[] iArr = { 2, 4, 6, 8, 6, 42 };
     printArray( iArr );
     //search for 6 in array
-    System.out.println( linSearch(iArr,6) );
+    System.out.println( linSearch(iArr,6) ); // expecting 2
 
     //search for 43 in array
-    System.out.println( linSearch(iArr,43) );
+    System.out.println( linSearch(iArr,43) ); // expecting -1
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     System.out.println("\nNow testing linSearch on Comparable arrays...");
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -69,9 +69,9 @@ public class LinSearch
                       "peach", "watermelon" };
     printArray( sArr );
     //search for "watermelon" in array
-    System.out.println( linSearch(sArr,"watermelon") );
+    System.out.println( linSearch(sArr,"watermelon") ); // expecting 1
     //search for "lychee" in array
-    System.out.println( linSearch(sArr,"lychee") );
+    System.out.println( linSearch(sArr,"lychee") ); // expecting -1
 /*----------------------------------------------------
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ----------------------------------------------------*/
