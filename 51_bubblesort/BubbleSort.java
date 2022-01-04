@@ -92,7 +92,7 @@ public class BubbleSort
   public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
   {
     //can't shallow copy, so copy manually
-    ArrayList<Comparable> newInput;
+    ArrayList<Comparable> newInput = new ArrayList<Comparable>();
     for(int i = 0 ; i < input.size() ; i++){
       newInput.add(input.get(i));
     }
@@ -138,7 +138,7 @@ public class BubbleSort
       System.out.println( "sorted version of ArrayList coco:\n"
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
-      System.out.println( coco );
+      
 
 
   }//end main
