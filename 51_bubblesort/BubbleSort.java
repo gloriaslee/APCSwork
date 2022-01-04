@@ -1,24 +1,30 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// 3 Lucky Duckies: Gloria Lee, Ziying Jian, Nora Miller
+// APCS pd8
 // HW51 -- implementing bubblesort
 // 2022-01-04t
-// time spent:  hrs
+// time spent: 1 hr
 
 /******************************
  * class BubbleSort -- implements bubblesort algorithm (vanilla)
  *
- * ALGO:
+ * ALGO: Traverses through the ArrayList in ascending order.
+ * If a value is greater than the value right of it, swap. Continue until you evaluate second to last value.
+ * Then, rinse and repeat until no swaps are made during array traversal.
  *
  * DISCO
+ * The issue of pass by value vs pass by reference presented itself here.
+ * Because Java passes references by value, you can't just shallow copy an ArrayList and change that.
+ * Instead, you have to copy each element one by one into the new array.
  *
  * QCC
  * q0: If a pass requires no swaps, what do you know?
- * a0:
+ * a0: The ArrayList is sorted (in increasing order)
  * q1: After pass p, what do you know?
- * a1:
+ * a1: The last p elements in the ArrayList are guaranteed to be in their final positions.
  * q2: How many passes are necessary to completely sort?
- * a2:
- *
+ * a2: For a worst case scenario, ArrayList.size() - 1 passes. You don't need size number of passes
+ * because in the last pass, you guarantee two values are in their final positions, not just one.
+
  ******************************/
 
 import java.util.ArrayList;
@@ -138,7 +144,7 @@ public class BubbleSort
       System.out.println( "sorted version of ArrayList coco:\n"
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
-      
+
 
 
   }//end main
