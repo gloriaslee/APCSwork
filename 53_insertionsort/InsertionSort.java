@@ -53,3 +53,30 @@ public class InsertionSort
       al.set( i, al.set( randomIndex, al.get(i) ) );
     }
   }
+  
+ // BUBBLE SORT LOOP: 
+// VOID version of bubbleSort
+  // Rearranges elements of input ArrayList
+  // postcondition: data's elements sorted in ascending order
+  public static void bubbleSortV( ArrayList<Comparable> data )
+  {
+    for(int p = 0; p  < data.size(); p++){
+      //for each pass, reset counter of swaps to 0.
+      //if counter still 0 at end of loop, break because the arraylist is sorted already
+      int swapCounter = 0;
+
+	for (int i = 0; i < data.size() -1; i++){
+
+	Comparable a = data.get(i);
+	Comparable b = data.get(i+1);
+	if (a.compareTo(b) == 1){
+		swap(data, i);
+    swapCounter+=1;
+		}
+	}
+  if(swapCounter == 0){
+    System.out.println("breaking");
+    break;
+  }
+  }
+}
