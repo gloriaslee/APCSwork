@@ -54,6 +54,8 @@ public class InsertionSort
     }
   }
   
+	
+public static void insertionSort(ArrayList<Comparable> data){}
  // BUBBLE SORT LOOP: 
 // VOID version of bubbleSort
   // Rearranges elements of input ArrayList
