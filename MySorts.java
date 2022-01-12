@@ -36,6 +36,10 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
 }
 //~~~~~~~~~~~~~~~~~~~ HELPER METHODS END ~~~~~~~~~~~~~~~~~~~
 
+/*
+Partition into sorted and unsorted regions, walking each element from the unsorted region up to where it belongs in the sorted region. With each pass, the size of sorted partition
+increases by 1, but no elements gain finalized positions.
+*/
   public void insertionSortV(ArrayList<Comparable> data){
     int passCounter = 0;
     int compareCounter = 0;
@@ -58,6 +62,10 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
    //return counters;
 }
 
+/*
+Traversing through the array from the end of the array to the beginning, swap each element with the smallest value in indexes [0,i], swapping in place if necessary. Repeat 
+until only the first element has not been swapped. Each swap constitutes a pass. After a pass, one more element at the end of the array is finalized.
+*/
 
   public void selectionSortV( ArrayList<Comparable> data )
   {
@@ -96,7 +104,10 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     //return counters;
   }//end selectionSort
 
-
+/*
+  Beginning at one end, compare 2 vals. Traverse the entire array, comparing two values at a time and swapping if necessary. Repeat steps 1,2 if necessary. Traversing 
+  the array once constitutes a pass and one pass means one more element at the end of the array is in its final position.
+  */
   public void bubbleSortV( ArrayList<Comparable> data )
     {
     int passCounter = 0;
