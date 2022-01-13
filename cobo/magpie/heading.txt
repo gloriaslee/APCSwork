@@ -2,3 +2,5 @@
 APCS
 Hw56 -- Turing Training Wheels
 time spent: 1.5 hrs
+QCC: Which questions/exploration questions should be answered? Which ones are just there for pondering?
+DISCO: The lab activities are really simple. Some of the code seems inefficient.
