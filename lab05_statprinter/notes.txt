@@ -1,0 +1,25 @@
+Great Nice Jingles (Nafiz Labib + Martha, Julia Kozak + Flopsy, Gloria Lee + Flounder)
+APCS pd8
+L05 -- pulling it together
+2022-02-03r
+time spent: 1 hr
+
+
+DISCO
+------------------------------------------------
+* We shouldn't set the ArrayList's size to max(size)+1, rather we should omit it at initialization and simply add at the end.
+* We used a for loop in the frequency list to correctly print out the right number of stars for each number.
+================================================
+
+
+QCC
+------------------------------------------------
+* Why can't we set the ArrayList size to max(data) + 1?
+* What should the program do if the ratio between longestBar and max is fractional?
+================================================
+
+
+MISC
+------------------------------------------------
+* Lab is cool.
+================================================
