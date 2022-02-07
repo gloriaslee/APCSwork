@@ -7,15 +7,17 @@ time spent: 1 hr
 
 DISCO
 ------------------------------------------------
-* We shouldn't set the ArrayList's size to max(size)+1, rather we should omit it at initialization and simply add at the end.
+* ArrayList size is different from ArrayList capacity. new ArrayList(n) sets the capacity to n, not the size. size
+  will still be 0 until we add to the ArrayList. This is why we were getting some array out of bound errors and why
+  initially, we couldn't fill the frequency ArrayList.
 * We used a for loop in the frequency list to correctly print out the right number of stars for each number.
 ================================================
 
 
 QCC
 ------------------------------------------------
-* Why can't we set the ArrayList size to max(data) + 1?
 * What should the program do if the ratio between longestBar and max is fractional?
+
 ================================================
 
 
