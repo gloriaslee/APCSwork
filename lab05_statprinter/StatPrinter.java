@@ -75,7 +75,8 @@ public class StatPrinter
     }
 
   }
-
+  //RUNTIME COMPLEXITY: n^2
+   //REASONING: There are 2 for loops, meaning that there's iteration through the array for each element of the original ArrayList, so it's similar to a quadratic.
 
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
@@ -90,6 +91,8 @@ public class StatPrinter
       }
       return max;
   }
+  //RUNTIME COMPLEXITY: n
+  //REASONING: The amount of time this takes will depend on the number of elements in ArrayList data (linear).
 
 
   // *************** QUESTION 03 **************************
@@ -114,6 +117,10 @@ public class StatPrinter
     }
     return false;
   }
+  //RUNTIME COMPLEXITY: 1
+    //REASONING: Because the method searches at a specific index, length of ArrayList doesn't affect runtime.
+
+
   //*************** QUESTION 04 **************************
   //postcond: returns list of modes in _frequency
   public ArrayList<Integer> getLocalModes()
@@ -126,6 +133,8 @@ public class StatPrinter
    }
    return ret;
  }
+ //RUNTIME COMPLEXITY: n
+  //REASONING: The amount of time this takes will depend on the number of elements in ArrayList _frequency (linear).
 
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
@@ -143,5 +152,7 @@ public class StatPrinter
      System.out.println();
    }
  }
+ //RUNTIME COMPLEXITY: n
+ //REASONING: The amount of time this takes will depend on the number of elements in our _frequency ArrayList.
 
 }//end class StatPrinter
