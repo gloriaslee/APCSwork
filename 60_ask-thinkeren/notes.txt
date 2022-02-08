@@ -1,8 +1,38 @@
-Reflect on your in-class experience.
-Jot down as many observables as you can.
-Converse with mates to fill in anything you may have missed.
-Discuss how to clean up the process.
-Transcribe your work into a text file. Sections:
-DISCO
-QCC
+Gloria Lee
+Great Nice Jingles (Nafiz Labib + Martha, Julia Kozak + Flopsy, Gloria Lee + Flounder)
+APCS
+HW60: A Termite is-a Turtle, a Thinker is-a Turtle
+2022-02-07
+time spent: 0.5h
+
+
+DISCO -
+* To merge sort two already sorted arrays, sort the first elements
+  of each sorted array, comparing them and removing whichever one is
+  added to the final merged arraylist. When one array is empty, just add
+  the rest of the second array to the end of the final array.
+* An array of size one will always be sorted.
+* Starting with one unsorted array, in class we outsource the deck, splitting
+  it up into smaller unsorted components until we know each thinker holds one card (automatically sorted).
+  Now, each thinker gives back their sorted card to whoever they got it from and that thinker sorts the two
+  sorted arrays into one sorted array. Then give that sorted array back to whoever they first got cards from.
+* Thinkers should not be fanning out cards. Just look at the first card of each deck (?)
+
+
+QCC-
+* What might the best/worst case scenarios be? I suspect there will be no best/worst case?
+* What might a pass constitute? Is there such thing as a pass in mergesort?
+* How many compares will be made in total?
+* What will the code for mergesort look like?
+* Will we be making new arrays with each newly sorted array? How memory efficient would that be?
+
+
 THINKER FIRMWARE (Instructions each turtle follows)
+* take: if not already holding one card, take whatever number of cards are given
+  to the thinker.
+* give: if thinker is holding more than one card, then split the deck(doesn't have to
+  be exactly half and half) and give each smaller deck to two other thinkeren.
+* give back: if the deck the thinker is holding is sorted, then give deck back to whoever
+  the thinker received it from.
+* sort??: once given two sorted decks, thinker should sort the two decks into a merged sorted
+  deck using mergesort. Then, give back again.
