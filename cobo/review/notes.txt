@@ -42,3 +42,8 @@ Activity 2
     first if boolean is all encompassing for all the other booleans that are checked for after the first one,
     meaning those booleans will never be reached. To fix this, the student can just reverse the order of their if statements
     with the more specific ones first and the more broad ones last.
+
+Activity 3
+
+3. indexOf returns the index of the first occurrence of the input and returns -1 if it cannot be found within the String or array.
+    substring returns the values at the index interval specified by the input parameters with the first input being inclusive and the second exclusive.
