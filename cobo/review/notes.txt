@@ -1,1 +1,44 @@
+// Great, Nice Jingles: Julia Kozak, Gloria Lee, Nafiz Labib (Flopsy, Flounder, Martha)
+// APCS pd08
+// HW63: Read, Review, Expand
+// 2022-02-10
+// time spent:1 hr
 
+Activity 1
+
+1.
+  a. Method signature: sentimentVal( String word )
+  b. Yes, this method requires a parameter of type String.
+      If you pass a different type of parameter, you will get an incompatible type
+      error while compiling.
+  c. The method returnsi a value of type double.
+
+2. absurd -1.23
+   abundant 0.83
+   acclaimed 0.49
+   oogawooga 0.0
+
+3.
+  a. Will compile because the input param is a String and it returns double,
+      which is the same type as the new var num.
+  b. Will not compile because the input param is not a String and the method
+      returns a double, not a String, so the new var word is of the incorrect type
+  c. Will not compile because the method only takes one parameter of type String, not two.
+
+
+Activity 2
+
+4. totalSentiment creates a String array of all the words in the review excluding spaces and
+    iterating through all elements in the array, all punctuation is removed from each word
+    and the sentiment value of that word is calculated and added to the total sentiment value.
+5. a. The ratings make sense because based on the positive or negative words in each review,
+    the numbers generated were accurately reflective of the sentiment of the review. However,
+    total Sentiment is also dependent on the length of the review as well, so short but positive reviews
+    will still mistakenly get low scores.
+   b. One way to return more reasonable ratings would be to also take punctuation such as ! to act as
+    a multiplier effect on the current total value. Another way would be to take the average sentiment
+    instead of total sentiment because this would remove dependence on review length for good reviews.
+6. The student's logical error is that they ordered their boolean statements incorrectly so that now, the
+    first if boolean is all encompassing for all the other booleans that are checked for after the first one,
+    meaning those booleans will never be reached. To fix this, the student can just reverse the order of their if statements
+    with the more specific ones first and the more broad ones last.
