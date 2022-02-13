@@ -51,6 +51,7 @@ public class Review {
       return 5;
     }
   }
+
   static{
     try {
       Scanner input = new Scanner(new File("cleanSentiment.csv"));
@@ -129,6 +130,15 @@ public class Review {
     catch(Exception e)
     {
       return 0;
+    }
+  }
+
+
+  public static String fakeReview(String fileName){
+    String text = textToString(fileName);
+    String[] words = text.split(" ");
+    for(String word: words){
+      
     }
   }
 

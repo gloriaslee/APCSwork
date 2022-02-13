@@ -46,4 +46,82 @@ Activity 2
 Activity 3
 
 3. indexOf returns the index of the first occurrence of the input and returns -1 if it cannot be found within the String or array.
-    substring returns the values at the index interval specified by the input parameters with the first input being inclusive and the second exclusive.
+    substring returns the values at the index interval specified by the input parameters with the first input being inclusive as the start index
+    and the second exclusive as the end index.
+    These methods can be used to divide an existing string into two parts by first finding the index i of
+    where you want to cut the string in half at and taking the substring from index 0 to i as one string and
+    index i to the length of the whole string as the other substring.
+    It is necessary to add one to the position of the space when copying the remainder of the string because you want to
+    start the copied substring at the index next to the space and not the space itself.
+5. In order to call a non static method, you must first create an instance of the class that the method falls under. On the other hand,
+   to call a static method, you don't need to first create an instance of its class. A static method can only access methods if they are also
+   static, while a non static method can access both static and non static methods.
+6. fakeReview can be modified so that instead of only using random adjectives, it can create reviews that are either positive or negative
+   using only random adjectives from either the positive or negative adjective lists. It can also not change adjectives if they are already
+   positive or negative depending on the sentiment value.
+
+Activity 4
+
+1. One reason to autogenerate a negative review would be to spam review pages for a product with
+
+ACTIVITY 5
+1. It's interactive and implements a lot of the ideas from the lab activities. Also, Hangman is a pretty nice and simple game to try out.
+2. We planned out what methods we would need for each step, such as assigning a random word or processing a guess, and built each method
+   one by one and testing it with print statements.
+3. static boolean checkInput(String s) {
+  - This method takes a String that is whatever is input by the user, since the user will input either a letter or a guess. Since it wants
+  to ensure that the input is valid, it checks the length to make sure it is either a single character (length 1)
+  or a guess (length of the phrase). It is static because the methods are each being called in main independent of an instance, so it would
+  throw errors otherwise.
+4. static void checkWin(String s) {
+    if (s.toLowerCase().equals(guess.toLowerCase().substring(0, guess.length()-1))) {
+      win = true;
+    }
+  }
+  - toLowerCase(), equals(), substring(), and length() are being called here. toLowerCase() is returning each String involved in its lowercase form, so guesses aren't case sensitive. equals()
+5. One code segment that uses nested conditional statements or compound boolean expressions:
+
+    static boolean checkInput(String s) {
+      if (s.length() == 1 || s.length() == display.length()-1) {
+       return true;
+      } else {
+      return false;
+      }
+    }
+
+    Compound boolean expressions are used here. Another way to write this code to achieve the same result would be:
+
+    static boolean checkInput(String s) {
+      if(s.length == 1){
+        return true;
+      } else if( s.length() == display.length()-1) {
+        return true;
+      } else{
+        return false;
+      }
+    }
+
+6. One code segment that uses iteration:
+
+static void updateDisplayChar(String s) {
+    for (int i=0; i<display.length()-1; i++) {
+      if (guess.toLowerCase().substring(i, i+1).equals(s)) {
+        display = display.substring(0, i) + guess.substring(i, i+1) + display.substring(i+1);
+      }
+    }
+  }
+
+  This is a for loop that goes through each letter of your guess statement. Any letter that is correct will be part of the returned String display that appears on screen.
+
+  Another way to write this using another type of loop would be: 
+
+
+  static void updateDisplayChar(String s){
+    int i = 0;
+    while(i<display.length()-1){
+      if (guess.toLowerCase().substring(i, i+1).equals(s)) {
+        display = display.substring(0, i) + guess.substring(i, i+1) + display.substring(i+1);
+      }
+      i++;
+    }
+  }
