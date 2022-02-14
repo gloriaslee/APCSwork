@@ -1,3 +1,9 @@
+// Great, Nice Jingles: Julia Kozak, Gloria Lee, Nafiz Labib (Flopsy, Flounder, Martha)
+// APCS pd08
+// HW63: Read, Review, Expand
+// 2022-02-13
+// time spent:1 hr
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
@@ -18,7 +24,7 @@ public class Review {
   private static final String SPACE = " ";
 
   public static void main(String[] args){
-    System.out.println(sentimentVal("happily"));
+     System.out.println(sentimentVal("happily"));
     System.out.println(sentimentVal("terrible"));
     System.out.println(sentimentVal("cold"));
     System.out.println(sentimentVal("absurd"));
@@ -31,7 +37,10 @@ public class Review {
     System.out.println(starRating("SimpleReview.txt"));
     System.out.println(starRating("GoodReview.txt"));
     System.out.println(starRating("BadReview.txt"));
-  }
+    System.out.println(fakeReview("GoodReview.txt", false));
+    System.out.println(fakeReview("BadReview.txt", true));
+    System.out.println(fakeReview("SimpleReview.txt", false));
+   }
 
   public static int starRating(String fileName){
     double rating = totalSentiment(fileName);
@@ -72,7 +81,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        //System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
@@ -134,12 +143,32 @@ public class Review {
   }
 
 
-  public static String fakeReview(String fileName){
+  public static String fakeReview(String fileName, boolean isPos){
+    String fakeReview = "\n";
     String text = textToString(fileName);
     String[] words = text.split(" ");
-    for(String word: words){
-      
+    for(int i=0; i<words.length; i++){
+      if(words[i].substring(0,1).equals("*")){
+        String adj = removePunctuation(words[i]);
+        if(!isPos){
+          if(sentimentVal(adj)>=0){
+            words[i] = randomNegativeAdj() + getPunctuation(words[i]);
+          } else{
+            words[i] = adj + getPunctuation(words[i]);
+          }
+        } else{
+          if(sentimentVal(adj)<0){
+            words[i] = randomPositiveAdj() + getPunctuation(words[i]);
+          } else{
+            words[i] = adj + getPunctuation(words[i]);
+          }
+        }
+      }
     }
+    for(String word: words){
+      fakeReview += word + " ";
+    }
+    return fakeReview;
   }
 
   public static double totalSentiment(String fileName){
