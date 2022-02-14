@@ -62,7 +62,16 @@ Activity 3
 
 Activity 4
 
-1. One reason to autogenerate a negative review would be to spam review pages for a product with
+1. One reason to autogenerate a negative review would be to spam review pages with negative reviews in a way that the reviews
+    are not marked as spam.
+2. One reason to autogenerate a positive review would be to artificially boost the product's ratings.
+3. To create a stronger review, go through each adjective marked with * using a for loop that loops through the entire String array and
+    depending on the sentimentVal of the adjective and whether or not you want a positive or a negative strong review, change that adjective
+    to a more positive or negative one. If the sentimentVal matches the positive or negative tone you want, don't change the adjective.
+5. The result is neWord (the original string without the first character)
+6. This was necessary because adjectives are checked for sentimentValue using the .csv file, which doesn't contain words with * before each one,
+    so if we don't remove the *, all sentimentVals will return 0
+7. Instead of randomly using positive words, we can limit it to only choosing words with sentiment values of 1 or above.
 
 ACTIVITY 5
 1. It's interactive and implements a lot of the ideas from the lab activities. Also, Hangman is a pretty nice and simple game to try out.
@@ -113,7 +122,7 @@ static void updateDisplayChar(String s) {
 
   This is a for loop that goes through each letter of your guess statement. Any letter that is correct will be part of the returned String display that appears on screen.
 
-  Another way to write this using another type of loop would be: 
+  Another way to write this using another type of loop would be:
 
 
   static void updateDisplayChar(String s){
