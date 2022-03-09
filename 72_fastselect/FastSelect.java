@@ -91,7 +91,9 @@ public class FastSelect {
     int[] sussy = {7, 1, 5, 12, 3};
     System.out.println("The 2rd number..." + fastSelect(sussy, 2, 4, 0)); 
     System.out.println("The 3rd number..." + fastSelect(sussy, 3, 4, 0)); 
-    // int[] mongus = {7, 1, 5, 12, 3, 15, 17};
+    int[] a = {1,2,3};
+    System.out.println("Best Case? "+ fastSelect(a, 2, 2, 0));
+    System.out.println("Worst Case? "+ fastSelect(a, 3, 2,0));// int[] mongus = {7, 1, 5, 12, 3, 15, 17};
     // System.out.println("The 3rd number..." + fastSelect(mongus, 3, 6, 0)); 
     // int[] crew = {7, 5, 1, 12, 3, 17, 15};
     // System.out.println("The 3rd number..." + fastSelect(crew, 3, 6, 0)); 
