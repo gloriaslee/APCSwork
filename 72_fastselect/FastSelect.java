@@ -10,12 +10,15 @@ ALGO:
 {1 3 5 12 7} s = 2
 s is the sorted position of the pivot 
 if s < y => lowerbound = 0, upperbound = s 
-if s > y => lowerbound = s, upperbound = arraylength - 1
+if s > y => lowerbound = s, upperbound = arraylength - 1. y changes to y-s
 if s = y return? :) 
 
-Best Case: O(n)
-Worst Case: O(n^2)
-Average Case: O(n * logn)
+Best Case: O(n) in the case that the partition point chosen has a final position of exactly the y desired.
+          In that case, only the mysterion algo would be executed to sort.
+Worst Case: O(n^2) in the case that all partition points chosen are extremes from the y value. Recursively near the y value until it is reached.
+          At worst, depending on partition point, this will take n^2 to gradually constrict bounds through the entire array.
+Average Case: O(n * logn) Because we are using the middle point as the partition point. On average, there will be logn repetitions before y 
+            value is reached.
 
 DISCO:
   * Optimation is hard.
@@ -34,10 +37,11 @@ public class FastSelect {
   public static int fastSelect(int[] arr, int y, int upperBound, int lowerBound) { //y is the yth smallest value in an array that you want to find
     // int upperBound; 
     // int lowerBound;
-    int pivot = (int)(upperBound + lowerBound) / 2;  
+    int pivot = 1;
+    //int pivot = (int)(upperBound + lowerBound) / 2;  
     int current = (mysterion(arr, lowerBound, upperBound, pivot)); 
-    System.out.println(current);
-    
+    System.out.println("current: "+current);
+    System.out.println("y "+y);
     
 
     if ( current > y -1 ) {
@@ -45,10 +49,10 @@ public class FastSelect {
       // return mysterion(arr, lowerBound, upperBound, pivot); 
     }
     
-    else if( current < y -1 ) {
-      fastSelect(arr, y, upperBound, current); 
+    if( current < y -1 ) {
+      fastSelect(arr, y-current, upperBound, current); 
     }
-    else if ( current == y-1 ) {
+    if ( current == y-1 ) {
       return arr[pivot];
     }
     return arr[pivot]; 
@@ -60,6 +64,11 @@ public class FastSelect {
     o[x] = o[y];
     o[y] = tmp;
   } // helper 
+  public static void print( int[] arr ){
+        for ( int element : arr )
+            System.out.print( element + " \n" );
+            
+    }
   
   public static int mysterion( int arr[], int a, int b, int c)
    {
@@ -74,7 +83,7 @@ public class FastSelect {
          s++;}
      }
      swap(s,b,arr);
- 
+     print(arr);
      return s;
    }// helper 
 
