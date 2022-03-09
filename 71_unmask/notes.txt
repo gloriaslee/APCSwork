@@ -1,0 +1,4 @@
+A prereq for c: c must be between a and b value. 
+a and b act as index bounds for sorting consideration.
+How to choose which index to use as c? Recursively trim array until we only have two element array to guarantee sortedness using a constant c val?
+Are there worst cases?
