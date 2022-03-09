@@ -10,7 +10,7 @@ ALGO:
 {1 3 5 12 7} s = 2
 s is the sorted position of the pivot 
 if s < y => lowerbound = 0, upperbound = s 
-if s > y => lowerbound = s, upperbound = arraylength - 1. y changes to y-s
+if s > y => lowerbound = s, upperbound = arraylength - 1. 
 if s = y return? :) 
 
 Best Case: O(n) in the case that the partition point chosen has a final position of exactly the y desired.
@@ -50,7 +50,7 @@ public class FastSelect {
     }
     
     if( current < y -1 ) {
-      fastSelect(arr, y-current, upperBound, current); 
+      fastSelect(arr, y, upperBound, current); 
     }
     if ( current == y-1 ) {
       return arr[pivot];
