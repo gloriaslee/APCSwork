@@ -4,42 +4,21 @@ APCS pd 08
 HW72 -- So So Fast 
 2022-03-08 
 time spent: 1.5 hrs 
-ALGO:
 
-{7 1 5 12 3} 
-{1 3 5 12 7} s = 2
-s is the sorted position of the pivot 
-if s < y => lowerbound = 0, upperbound = s 
-if s > y => lowerbound = s, upperbound = arraylength - 1. 
-if s = y return? :) 
 
-Best Case: O(n) in the case that the partition point chosen has a final position of exactly the y desired.
-          In that case, only the mysterion algo would be executed to sort.
-Worst Case: O(n^2) in the case that all partition points chosen are extremes from the y value. Recursively near the y value until it is reached.
-          At worst, depending on partition point, this will take n^2 to gradually constrict bounds through the entire array.
-Average Case: O(n * logn) Because we are using the middle point as the partition point. On average, there will be logn repetitions before y 
-            value is reached.
-
-DISCO:
-  * Optimation is hard.
-  * The return value of s is where the pivot is after the array has been split. The value at index s in the array is at its sorted position 
-QCC:
-  * Why won't it work? ):< 
-  * Why use this sorting algorithm when its worst case is worse than the execution time of worst cases of other algos (mergesort)
-  * Are we finding the nth smallest or the n+1th smallest if the index starts at 0?
 */ 
 
 // Write Java class FastSelect, which will use your renamed mystery method to find, as fast as possible, the _y_th smallest value in an array.
 // Categorize the execution time of your algorithm using Big-Oh notation.
 
-public class FastSelect {
+public class QuickSelect {
   
   public static int fastSelect(int[] arr, int y, int upperBound, int lowerBound) { //y is the yth smallest value in an array that you want to find
     // int upperBound; 
     // int lowerBound;
     //int pivot = 1;
     int pivot = (int)(upperBound + lowerBound) / 2;  
-    int current = (mysterion(arr, lowerBound, upperBound, lowerBound)); 
+    int current = (mysterion(arr, lowerBound, upperBound)); 
     System.out.println("current: "+current);
     System.out.println("y "+y);
     
@@ -53,9 +32,9 @@ public class FastSelect {
       return fastSelect(arr, y, upperBound, current+1); 
     }
     if ( current == y-1 ) {
-      return arr[current];
+      return current;
     }
-    return arr[current]; 
+    return current; 
   }
   
   public static void swap( int x, int y, int[] o )
@@ -70,8 +49,9 @@ public class FastSelect {
             
     }
   
-  public static int mysterion( int arr[], int a, int b, int c)
+  public static int mysterion( int arr[], int a, int b)
    {
+    int c = (a+b)/2;
      int v = arr[c];
  
      swap( c, b, arr);
@@ -103,3 +83,28 @@ public class FastSelect {
     
   } // main 
 } //
+
+/*
+ALGO
+{7 1 5 12 3} 
+{1 3 5 12 7} s = 2
+s is the sorted position of the pivot 
+if s < y => lowerbound = 0, upperbound = s 
+if s > y => lowerbound = s, upperbound = arraylength - 1. 
+if s = y return? :) 
+
+Best Case: O(n) in the case that the partition point chosen has a final position of exactly the y desired.
+          In that case, only the mysterion algo would be executed to sort.
+Worst Case: O(n^2) in the case that all partition points chosen are extremes from the y value. Recursively near the y value until it is reached.
+          At worst, depending on partition point, this will take n^2 to gradually constrict bounds through the entire array.
+Average Case: O(n * logn) Because we are using the middle point as the partition point. On average, there will be logn repetitions before y 
+            value is reached.
+
+DISCO:
+  * Optimation is hard.
+  * The return value of s is where the pivot is after the array has been split. The value at index s in the array is at its sorted position 
+QCC:
+  * Why won't it work? ):< 
+  * Why use this sorting algorithm when its worst case is worse than the execution time of worst cases of other algos (mergesort)
+  * Are we finding the nth smallest or the n+1th smallest if the index starts at 0?
+*/
