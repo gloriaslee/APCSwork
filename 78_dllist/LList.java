@@ -5,17 +5,31 @@
 // time spent: 1  hr
 /*
 DISCO:
+* You can't just setNext like we did with LLNode, because now we also have to account for making sure that the point for
+ previous node also points to the correct thing. (setPrev) This can get tricky to keep track of.
+  
+}
 
-* java stupid 
 QCC:
-* Is this how it's supposed to work.
+* Is this how it's supposed to work?
+* Correct output?
 * When we add a new prev node to the node, do they connect by the new prev node's cdr?
-
-ALGO ADD:
   The new node's prev is also set to temp? 
-ALGO REM:
+  
+ALGO ADD:
+  Create new DDLNode of with null prev and next and cargo as input.
+  Iterate through the List until you reach the index one less than the index of the index of addition using tmp and tmp = tmp.getNext() each time
+  At that index, set the new node's _nextNode to the DDLNode at that index's getNext()
+  set the new node's _prevNode to tmp 
+  set tmp's new Next to be the new Node.
+  
 
-KIS USED: 3 pages total
+  
+ALGO REM:
+  Iterate through list until you reach index -1 of desired removal target. 
+  Set the DLLNode at that index's next to the DLLNode two right of it. 
+  Then, set the DLLNode at index of removal to the DLLNode at index -1
+KTS USED: 3 pages total
 */
 
 
@@ -32,6 +46,7 @@ public class LList implements List //your List interface must be in same dir
 
   //instance vars
   private DLLNode _head;
+  private DLLNode _back;
   private int _size;
 
   // constructor -- initializes instance vars
