@@ -1,4 +1,10 @@
-import java.awt.Point;
+/*
+TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
+APCS pd 08
+HW -- lab07
+2022-03-19
+time spent: 3 h 
+*/import java.awt.Point;
 import java.awt.Graphics;
 import java.awt.Dimension;
 import java.awt.Font;

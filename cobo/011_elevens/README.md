@@ -1,4 +1,9 @@
-BrainForked: Gloria Lee, Jack Chen, John Gupta-She
+
+TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
+APCS pd 08
+HW -- lab07
+2022-03-19
+time spent: 3 h 
 
 - lab took faster than we expected because there were a lot of optional parts
 - this was a nice refresher on how abstract works

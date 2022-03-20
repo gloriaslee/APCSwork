@@ -1,4 +1,10 @@
+
 /**
+TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
+APCS pd 08
+HW -- lab07
+2022-03-19
+time spent: 3 h 
  * Card.java
  *
  * <code>Card</code> represents a playing card.

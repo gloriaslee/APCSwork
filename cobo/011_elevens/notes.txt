@@ -1,8 +1,22 @@
+/*
 TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
 APCS pd 08
 HW -- lab07
 2022-03-19
-time spent: 
+time spent: 3 h 
+*/
+
+QCC:
+- any way to make this code more effishient?
+- how does java's GUI work?
+- when is using interface preferable to using abstract and vice versa?
+
+DISCO:
+- abstract != interface. abstract is for general functionality while interface is more of an outline to follow.
+- shallow vs deep copy. when we tried to make shallow copies of arrays, the original array never changed. 
+- it's sometimes useful to hide functionality and not to present all functionality to the user, such as when
+  checking for 11sum or jqk combo was hidden within isLegal
+
 ____________________________________________________________________________
 Activity 2 Questions:
 

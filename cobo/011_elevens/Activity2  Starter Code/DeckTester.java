@@ -1,4 +1,9 @@
 /**
+TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
+APCS pd 08
+HW -- lab07
+2022-03-19
+time spent: 3 h 
  * This is a class that tests the Deck class.
  */
 public class DeckTester {
