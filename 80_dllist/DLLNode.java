@@ -22,9 +22,9 @@ public class DLLNode<rat>
   //--------------v  ACCESSORS  v--------------
   public rat getCargo() { return _cargo; }
 
-  public DLLNode getNext() { return _nextNode; }
+  public DLLNode<rat> getNext() { return _nextNode; }
 
-  public DLLNode getPrev() { return _prevNode; }
+  public DLLNode<rat> getPrev() { return _prevNode; }
   //--------------^  ACCESSORS  ^--------------
 
 
