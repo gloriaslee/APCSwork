@@ -3,7 +3,7 @@ TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
 APCS pd 08
 HW -- lab07
 2022-03-19
-time spent: 3 h
+time spent: 3 hrs
 */
 
 QCC:
@@ -56,7 +56,19 @@ Activity 3 Questions:
 
 3)  First, the random int r to be chosen would be 0, then, 1.
 ____________________________________________________________________________
-
+  Activity 6 Questions
+  
+  1) All possible plays for the board:
+    - remove the 5 of clubs and 6 of spades. 
+    - remove the 5 of spades and 6 of spades.
+  
+  2)The cards must be a JQK because there are no other methods to remove a Jack, Queen, or King other than
+    removing them with each other.
+    
+  3) This game does not involve strategy because no distinction is made between different card suits,
+      meaning that when deciding between choosing a five of spades or hearts for example, there is no difference/benefit
+      to choosing one over the other.
+____________________________________________________________________________
   Activity 7 Questions
 
 1) Card[] cards, Deck deck, String[] ranks, String[] suits, String[] point value, int boardsize
