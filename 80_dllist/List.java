@@ -1,4 +1,8 @@
-
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW80: Generically Speaking
+// 2022-03-24r
+// time spent: 1  hr
 /***
  * interface List
  * subset of actual Java List interface
