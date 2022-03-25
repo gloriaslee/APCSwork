@@ -44,13 +44,13 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     if ( index < 0 || index > size() )
       throw new IndexOutOfBoundsException();
 
-    else if ( index == size() ) 
+    else if ( index == size() )
       addLast( newVal );
 
     DLLNode<T> newNode = new DLLNode<T>( newVal, null, null );
 
     //if index==0, insert node before head node
-    if ( index == 0 ) 
+    if ( index == 0 )
       addFirst( newVal );
     else {
       DLLNode<T> tmp1 = _head; //create alias to head
@@ -60,7 +60,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
         tmp1 = tmp1.getNext();
 
       //init a pointer to node at insertion index
-      DLLNode<T> tmp2 = tmp1.getNext(); 
+      DLLNode<T> tmp2 = tmp1.getNext();
 
       //insert new node
       newNode.setNext( tmp2 );
@@ -152,9 +152,10 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public /* YOUR CODE HERE */
+  public /* YOUR CODE HERE */ Iterator retplzhelp()
   {
-    /* YOUR CODE HERE */
+    return Iterator;
+    /*this is not going to work*/
   }
 
   //--------------------------------------------------------
@@ -254,37 +255,44 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //constructor
     public MyIterator()
     {
-      /* YOUR CODE HERE */
+      Iterator<T> it = _dummy.iterator();
+
+      _okToRemove = false;
     }
 
     //-----------------------------------------------------------
     //--------------v  Iterator interface methods  v-------------
     //return true if iteration has more elements.
-    public boolean hasNext() 
+    public boolean hasNext()
     {
-      /* YOUR CODE HERE */
+      Iterator<T> it = _dummy.iterator();
+
+      if(it.hasNext()){
+        return true;
+      }
+      return false;
     }
 
 
     //return next element in this iteration
-    public T next() 
-    {
-      /* YOUR CODE HERE */
-    }
+    // public T next()
+    // {
+    //   /* YOUR CODE HERE */
+    // }
 
 
     //return last element returned by this iterator (from last next() call)
     //postcondition: maintains invariant that _dummy always points to a node
     //               (...so that hasNext() will not crash)
-    public void remove()
-    {
-            /* YOUR CODE HERE */
-    }
-    //--------------^  Iterator interface methods  ^-------------
-    //-----------------------------------------------------------
-  }//*************** end inner class MyIterator ***************
+  //   public void remove()
+  //   {
+  //           /* YOUR CODE HERE */
+  //   }
+  //   //--------------^  Iterator interface methods  ^-------------
+  //   //-----------------------------------------------------------
+  // }//*************** end inner class MyIterator ***************
 
-
+}
 
   //main method for testing
   public static void main( String[] args )
