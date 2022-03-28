@@ -152,11 +152,12 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public /* YOUR CODE HERE */ Iterator retplzhelp()
+  public MyIterator iterator()
   {
-    return Iterator;
-    /*this is not going to work*/
+    return new MyIterator();
+  
   }
+
 
   //--------------------------------------------------------
   //--------------^  List interface methods  ^--------------
@@ -255,7 +256,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //constructor
     public MyIterator()
     {
-      Iterator<T> it = _dummy.iterator();
+      _dummy = _head;
 
       _okToRemove = false;
     }
@@ -265,9 +266,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return true if iteration has more elements.
     public boolean hasNext()
     {
-      Iterator<T> it = _dummy.iterator();
-
-      if(it.hasNext()){
+      if(_dummy.getNext()!=null){
         return true;
       }
       return false;
@@ -275,29 +274,38 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
     //return next element in this iteration
-    // public T next()
-    // {
-    //   /* YOUR CODE HERE */
-    // }
+    public T next()
+    {
+      /* YOUR CODE HERE */
+      if (_dummy.getNext()!=null) {
+        return _dummy.getCargo();
+      }
+      return null;
+    }
 
 
-    //return last element returned by this iterator (from last next() call)
-    //postcondition: maintains invariant that _dummy always points to a node
+    // return last element returned by this iterator (from last next() call)
+    // postcondition: maintains invariant that _dummy always points to a node
     //               (...so that hasNext() will not crash)
-  //   public void remove()
-  //   {
-  //           /* YOUR CODE HERE */
-  //   }
-  //   //--------------^  Iterator interface methods  ^-------------
-  //   //-----------------------------------------------------------
-  // }//*************** end inner class MyIterator ***************
+    public void remove()
+    {
+      int index = 0;
+      if (_dummy.getNext()!= null) {
+        _dummy.getPrev().setNext(_dummy.getNext());
+        _dummy.getNext().setPrev(_dummy.getPrev());
+        index += 1;
+      }
+      
+    }
+    //--------------^  Iterator interface methods  ^-------------
+    //-----------------------------------------------------------
+  }//*************** end inner class MyIterator ***************
 
-}
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
     LList james = new LList();
 
     System.out.println("initially: " );
@@ -340,7 +348,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
   }//end main()
 
 }//end class LList
