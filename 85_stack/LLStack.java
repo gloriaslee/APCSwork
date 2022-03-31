@@ -17,6 +17,9 @@ public class LLStack<PANCAKE> implements Stack<PANCAKE> {
   }
 
   public PANCAKE pop(){
+    if(who.isEmpty()){
+      return null;
+    }
     PANCAKE out = peekTop();
     who.removeFirst();
     return out;
