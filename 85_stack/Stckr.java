@@ -27,6 +27,8 @@ public class Stckr
     System.out.println(cakes.pop()); 
     System.out.println(cakes.pop()); 
     System.out.println(cakes.pop()); 
+    System.out.println(cakes.pop()); 
+    
     System.out.println(cakes.isEmpty());
     System.out.println("Does your code break");
     System.out.println(cakes.pop()); 
