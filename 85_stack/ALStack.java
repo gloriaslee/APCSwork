@@ -17,7 +17,7 @@ public class ALStack<PANCAKE> implements Stack<PANCAKE> {
   }
 
   public PANCAKE pop(){
-    if(who.isEmpty()){
+    if(you.isEmpty()){
       return null;
     }
     PANCAKE out = peekTop();
