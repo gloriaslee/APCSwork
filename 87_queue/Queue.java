@@ -1,3 +1,16 @@
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW 87- The English Do Not Wait In Line For Soup
+// 2022-04-03
+// time spent: 0.7  hr
+/*
+QCC:
+  - It's chewsday innit?
+  - What are QUASARs? (im thinking quesedillas)
+DISCO:
+  - This hw incorporated classes within classes. In this case, because LLNode was not static, it was an inner class.
+  - We put class LLNode inside of NodeQueue so that it can access the methods from LLNode.
+*/
 /***
  * interface Queue
  * Includes only methods listed in AP subset of Java
