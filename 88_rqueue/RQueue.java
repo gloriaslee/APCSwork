@@ -1,4 +1,18 @@
 /***
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW 88- BPC Kiddies Do Not Wait in Line Either 
+// 2022-04-04
+// time spent: 0.5  hr
+
+DISCO: 
+- Using an arraylist to store data is useful because randomizing from an arraylist is easier than rearranging nodes in a queue.
+- Going from right to left with the front of the queue on the right is more efficient 
+QCC:
+- Why did Queue<String> PirateQueue = new RQueue<String>() cause a cannot find symbol error for the sample method?
+- ^^^ we changed the Queue to a RQueue and it somehow worked :) 
+- Can i slurp java spaghetti code 
+
  * class RQueue
  * SKELETON
  * A node-based, randomized queue
@@ -13,12 +27,12 @@
  *      _end -^                     ^- _front
  *
  **/
-
+import java.util.ArrayList; 
 
 public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
 {
   //instance variables
-  private LLNode _front, _end;
+  private LLNode<SWASHBUCKLE> _front, _end;
   private int _size;
 
 
@@ -67,37 +81,52 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
 
     return retVal;
 
-  }//O(?)
+  }//O(1)
 
 
   public SWASHBUCKLE peekFront()
   {
     return _front.getCargo();
 
-  }//O(?)
+  }//O(1)
 
 
   /***
    * void sample() -- a means of "shuffling" the queue
    * Algo:
-   *   < YOUR SUCCINCT SUMMARY HERE >
+   *   Create a new ArrayList and dequeue the queue, adding whatever is returned to the arraylist.
+   *   Generate random integer from range 0 to arraylist size - 1. 
+   *   At this index, enqueue what element in the arraylist is at that index and remove that element afterwards.
+   *   Repeat until no more elements in arraylist.
    **/
-  public void sample ()
+  public void sample()
   {
-
-  }//O(?)
+    ArrayList<SWASHBUCKLE> simple = new ArrayList<SWASHBUCKLE>(); 
+  
+    for (int i = _size; i > 0; i --) {
+      simple.add(dequeue());
+    }
+    
+    int sizething = simple.size();
+    for(int j = 0; j < sizething; j ++) {
+      int rand = (int)(Math.random() * simple.size());
+      enqueue(simple.get(rand));
+      simple.remove(rand); 
+    }
+        
+  }//O(N)
 
 
   public boolean isEmpty()
   {
     return _front == null;
-  } //O(?)
+  } //O(1)
 
 
   // print each node, separated by spaces
   public String toString()
   {
-return _cargo.toString();
+return _front.toString();
   }//end toString()
 
 
@@ -106,9 +135,9 @@ return _cargo.toString();
   public static void main( String[] args )
   {
 
-      /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+    
 
-    Queue<String> PirateQueue = new RQueue<String>();
+    RQueue<String> PirateQueue = new RQueue<String>();
 
     System.out.println("\nnow enqueuing...");
     PirateQueue.enqueue("Dread");
@@ -121,6 +150,9 @@ return _cargo.toString();
     System.out.println("\nnow testing toString()...");
     System.out.println( PirateQueue ); //for testing toString()...
 
+    System.out.println("Testing Sample");
+    PirateQueue.sample(); 
+    
     System.out.println("\nnow dequeuing...");
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
@@ -132,7 +164,7 @@ return _cargo.toString();
     System.out.println("\nnow dequeuing fr empty queue...\n" +
                        "(expect NPE)\n");
     System.out.println( PirateQueue.dequeue() );
-
+  /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
   }//end main

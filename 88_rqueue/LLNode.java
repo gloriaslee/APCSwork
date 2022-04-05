@@ -1,38 +1,53 @@
+/***
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW 88- BPC Kiddies Do Not Wait in Line Either 
+// 2022-04-04
+// time spent: 0.5  hr
+
+DISCO: 
+- Using an arraylist to store data is useful because randomizing from an arraylist is easier than rearranging nodes in a queue.
+- Going from right to left with the front of the queue on the right is more efficient 
+QCC:
+- Why did Queue<String> PirateQueue = new RQueue<String>() cause a cannot find symbol error for the sample method?
+- ^^^ we changed the Queue to a RQueue and it somehow worked :) 
+- Can i slurp java spaghetti code 
+
 /*****************************************************
  * class LLNode
  * Implements a node, for use in lists and other container classes.
  * Stores its data as a String
  *****************************************************/
 
-public class LLNode
+public class LLNode<SWASHBUCKLE>
 {
     //instance vars
-    private String _cargo;    //cargo may only be of type String
-    private LLNode _nextNode; //pointer to next LLNode
+    private SWASHBUCKLE _cargo;    //cargo may only be of type String
+    private LLNode<SWASHBUCKLE> _nextNode; //pointer to next LLNode
 
     // constructor -- initializes instance vars
-    public LLNode( String value, LLNode next ) {
+    public LLNode( SWASHBUCKLE value, LLNode next ) {
 	_cargo = value;
 	_nextNode = next;
     }
 
 
     //--------------v  ACCESSORS  v--------------
-    public String getCargo() { return _cargo; }
+    public SWASHBUCKLE getCargo() { return _cargo; }
 
-    public LLNode getNext() { return _nextNode; }
+    public LLNode<SWASHBUCKLE> getNext() { return _nextNode; }
     //--------------^  ACCESSORS  ^--------------
 
 
     //--------------v  MUTATORS  v--------------
-    public String setCargo( String newCargo ) {
-	String foo = getCargo();
+    public SWASHBUCKLE setCargo( SWASHBUCKLE newCargo ) {
+	SWASHBUCKLE foo = getCargo();
 	_cargo = newCargo;
 	return foo;
     }
 
-    public LLNode setNext( LLNode newNext ) {
-	LLNode foo = getNext();
+    public LLNode<SWASHBUCKLE> setNext( LLNode<SWASHBUCKLE> newNext ) {
+	LLNode<SWASHBUCKLE> foo = getNext();
 	_nextNode = newNext;
 	return foo;
     }
