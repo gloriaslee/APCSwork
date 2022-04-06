@@ -1,3 +1,11 @@
+/*
+Team BrainForked - Gloria Lee, Jack Chen, Hamim Sean
+APCS
+L08: America's Next Top Data Scientist
+2022-04-06w
+time spent: 3.5 hrs
+*/
+
 import core.data.*;
 
 public class Welcome02_Object {
