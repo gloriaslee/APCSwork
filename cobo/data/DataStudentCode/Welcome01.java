@@ -12,3 +12,6 @@ public class Welcome01 {
       System.out.println("The temperature at " + loc + " is " + temp + "F");
    }
 }
+
+
+

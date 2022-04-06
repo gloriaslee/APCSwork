@@ -1,7 +1,7 @@
 /*
  Represents information about a NWS weather station
-*/
-
+*/ 
+  
 public class WeatherStation {
    private String name;
    private String id;
