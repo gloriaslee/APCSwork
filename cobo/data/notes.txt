@@ -2,7 +2,7 @@ Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
 APCS
 LAB08 --
 2022-04-05
-time spent: <elapsed time in hours, rounded to nearest tenth>
+time spent: 2 hrs
 
 
 DISCO
@@ -39,6 +39,17 @@ ACTIVITY 2:
 
 ACTIVITY 3:
 
+1. Temperature at Atlanta, Hartsfield is 59F
+2. PHSF -- Hawaii
+3. Hawaii 65F
+4. 48
+5. By the wind speed
+6. Pago Pago, AS, Samoa -- NSTU
+
+7. What stations are there in the east? 
+8. Not a lot.
+© 2022 GitHub, Inc.
+Terms
 
 
 <TNPG>'s CSV FLOW:
