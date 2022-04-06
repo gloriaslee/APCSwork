@@ -18,24 +18,23 @@ public class Welcome02_Object {
 
       Observation ob2 = ds2.fetch("Observation", "weather", "temp_f", "wind_degrees");
       System.out.println(id2 + ": " + ob2);
-
       String id3 = "KBFL";
-      DataSource ds3 = DataSource.connect("http://weather.gov/xml/current_obs/" + id3 + ".xml");
-      ds3.setCacheTimeout(15 * 60);
-      ds3.load();
+     DataSource ds3 = DataSource.connect("http://weather.gov/xml/current_obs/" + id3 + ".xml");
+     ds3.setCacheTimeout(15 * 60);
+     ds3.load();
 
-      Observation ob3 = ds3.fetch("Observation", "weather", "temp_f", "wind_degrees");
-      System.out.println(id3 + ": " + ob3);
+     Observation ob3 = ds3.fetch("Observation", "weather", "temp_f", "wind_degrees");
+     System.out.println(id3 + ": " + ob3);
 
-      if (ob1.colderThan(ob2) && ob1.colderThan(ob3)) {
-         System.out.println("Coldest" + id1);
-      }
-      if (ob2.colderThan(ob1) && ob2.colderThan(ob3)) {
-         System.out.println("Coldest" + id2);
-      }
-      else  {
-         System.out.println("Coldest" + id3);
-      }
+     if (ob1.colderThan(ob2) && ob1.colderThan(ob3)) {
+        System.out.println("Coldest" + id1);
+     }
+     if (ob2.colderThan(ob1) && ob2.colderThan(ob3)) {
+        System.out.println("Coldest" + id2);
+     }
+     else  {
+        System.out.println("Coldest" + id3);
+     }
    }
 }
 
