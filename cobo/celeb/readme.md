@@ -7,7 +7,7 @@
 The celeb experience?? :) 
 
 To Do List:
-* ~~  Discussion how to implement Game class ~~
+* ~~ Discussion how to implement Game class ~~
 * ~~ Make a celebrity class => Instance vars String name and String clue~~
 * ~~ Work on CelebrityGame => Instant vars ArrayList<Celebrity> CelebrityGameList~~
 * ~~ Work on Game methods: ~~ 
