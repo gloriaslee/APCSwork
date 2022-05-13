@@ -1,0 +1,32 @@
+
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW98: VIP in da room
+2022-05-12f
+time spent: 1 hrs
+
+A priority queue is filled with objects of class (PrioObject).
+
+There is an instance variable stored in each object that called Priority, which is an int that represents the priority of the item. The lower the int, the more priority it has, with 0 being the highest priority. 
+
+Each object additionally holds a cargo of type ??? (String, int, whatever)
+
+The queue performs tasks at index queueSize-1 first
+
+void	add(java.lang.Object x)  (O(1) usually)
+          Adds an item to this priority queue.
+If int priority is 0 (highest priority), then add to queue at index after last element in queue. 
+If not highest prio, then search the queue to find first occurrence of element with same prio and add there
+
+ boolean	isEmpty()
+          Returns true if this stack is empty, otherwise returns false.
+Self explanatory 
+
+ java.lang.Object	peekMin()  
+Returns the smallest item stored in this priority queue without removing it.
+Basically returns the task of highest priority
+Returns cargo of index queueSize - 1
+
+ java.lang.Object	removeMin()
+          Removes and returns the smallest item stored in this priority queue.
+Removes the object at index queueSize - 1, addressing the highest prio task
