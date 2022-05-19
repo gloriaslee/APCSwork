@@ -33,7 +33,7 @@ public class TreeNode
   TreeNode( int initValue, TreeNode initLeft, TreeNode initRight )
   {
     this(initValue);
-    ownself = new TreeNode(initValue,initLeft,initRight);
+  
     _lt = initLeft;
     _rt = initRight;
   }
