@@ -195,7 +195,7 @@ class MazeSolver
       return true;
     }
     else {
-      return false; 
+      return false;
     }
   }
   //   for (int i = 0; i < _maze.length; i++) {
@@ -242,17 +242,17 @@ public class Maze
 
     //drop our hero into maze at random location on path
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    
+
     // int startX = 4;
     // int startY = 3;
-    int startX = (int)(Math.random() * ms.w);
-    int startY = (int)(Math.random() * ms.h);
-    if (ms.onPath( startX, startY )) {
-      ms.solve( startX, startY );
-    }
-    else {
-      ms.solve( 4, 3 );
-    }
+    // int startX = (int)(Math.random() * ms.w);
+    // int startY = (int)(Math.random() * ms.h);
+    // if (ms.onPath( startX, startY )) {
+    //   ms.solve( startX, startY );
+    // }
+    // else {
+    //   ms.solve( 4, 3 );
+    // }
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()

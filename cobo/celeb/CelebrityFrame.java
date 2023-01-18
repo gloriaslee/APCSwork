@@ -49,6 +49,7 @@ public class CelebrityFrame extends JFrame
 	 */
 	private void setupFrame()
 	{
+    JFrame frame = new JFrame("FrameDemo");
     panelCards.add(gamePanel, "GAME");
     		panelCards.add(startPanel, "START");
     		this.setSize(800,800);
